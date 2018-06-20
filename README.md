@@ -1,0 +1,2 @@
+# kottlin_prt
+一个用kottlin语言编写的Android项目
