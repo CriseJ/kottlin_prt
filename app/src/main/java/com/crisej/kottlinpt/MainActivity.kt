@@ -12,13 +12,14 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
+import com.crisej.kottlinpt.base.BaseFragmentActivity
 import com.crisej.kottlinpt.body.fragment.HomeFragment
 import com.crisej.kottlinpt.user.fragment.Tab1Fragment
 import com.crisej.kottlinpt.user.fragment.Tab2Fragment
 import com.crisej.kottlinpt.user.fragment.Tab3Fragment
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : FragmentActivity(), View.OnClickListener {
+class MainActivity : BaseFragmentActivity(), View.OnClickListener {
     var exitTime: Long = 0
     private val tabNormal = intArrayOf(R.mipmap.ic_launcher, R.mipmap.ic_launcher, R.mipmap.ic_launcher, R.mipmap.ic_launcher)
     private val tabSelected = intArrayOf(R.mipmap.ic_launcher, R.mipmap.ic_launcher, R.mipmap.ic_launcher, R.mipmap.ic_launcher)
