@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--<android.support.v7.widget.RecyclerView-->
+        <!--android:id="@+id/ryView"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"/>-->
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_above="@+id/ll_bottomBtn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="28dp"/>
+
+    <LinearLayout
+        android:id="@+id/ll_bottomBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dp">
+
+        <Button
+            android:id="@+id/btn_prePage"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/dp_50"
+            android:text="上一页"/>
+
+        <Button
+            android:id="@+id/btn_nextPage"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/dp_50"
+            android:text="下一页"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

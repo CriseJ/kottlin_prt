@@ -2,7 +2,20 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.crisej.kottlinpt">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- 网络相关权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 手机电话权限 -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!-- 手机存储相关权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 加入在SDCard中写入数据的权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+
 
     <application
         android:name=".mapp.MainApplication"
@@ -12,7 +25,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".user.SplashActivity"
+        <activity android:name=".MainActivity"
             android:theme="@style/NoTitleFullScreenTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,7 +34,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".user.LoginActivity" />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".user.SplashActivity"></activity>
     </application>
 
 </manifest>
