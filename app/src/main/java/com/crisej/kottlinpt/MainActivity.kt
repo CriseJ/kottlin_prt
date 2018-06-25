@@ -52,7 +52,7 @@ class MainActivity : BaseFragmentActivity(), View.OnClickListener {
     }
 
     override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
-        if (keyCode === KeyEvent.KEYCODE_BACK && event!!.action === KeyEvent.ACTION_DOWN){
+        if (keyCode == KeyEvent.KEYCODE_BACK && event!!.action == KeyEvent.ACTION_DOWN){
             if (System.currentTimeMillis() - exitTime > 2000){
                 Toast.makeText(this@MainActivity, R.string.exit_text, Toast.LENGTH_SHORT)
             }else {

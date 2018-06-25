@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
+import android.widget.ScrollView
 import com.crisej.kottlinpt.R
 import com.crisej.kottlinpt.base.BaseFragment
 import kotlinx.android.synthetic.main.tab1_fragment_layout.*
@@ -71,6 +72,7 @@ class Tab1Fragment : BaseFragment(), View.OnClickListener{
         mNextPageUrl = nextPageUrlStr
         tvTitle.text = title
         tvContent.text = content
+        sv_content.post( Runnable { sv_content.fullScroll(ScrollView.FOCUS_UP) })
     }
 
     fun getDocument(pageUrl: String?): Document? {
