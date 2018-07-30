@@ -25,7 +25,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name=".user.SplashActivity"
             android:theme="@style/NoTitleFullScreenTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -34,8 +34,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".user.LoginActivity" />
-        <activity android:name=".user.SplashActivity" />
-        <activity android:name=".user.fragment.CatalogActivity"></activity>
+        <activity android:name=".MainActivity"
+            android:theme="@style/NoTitleFullScreenTheme"/>
+        <activity android:name=".user.fragment.CatalogActivity" />
+        <activity
+            android:name=".body.ui.NavigationDrawActivity"
+            android:label="@string/title_activity_navigation_draw"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

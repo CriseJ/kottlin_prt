@@ -46,5 +46,21 @@ open class BaseFragmentActivity : BaseActivity() {
         return transaction
     }
 
+    /**
+    * 根据动态添加的fragment的Tag，来获取要显示的Fragment
+     * @param curFragment 当前显示的Fragment
+     * @param fgTag 要显示的Fragment的Tag
+    * */
+    fun takeFragmentToShow(curFragment: Fragment, beShowingFragment: Fragment, fgTag: String, containerId: Int): Fragment?{
+        val transaction = mFManager?.beginTransaction()
+        if (!beShowingFragment.isAdded){
+            transaction?.hide(curFragment)?.add(containerId, beShowingFragment)?.commit()
+        }else{
+            transaction?.hide(curFragment)?.show(beShowingFragment)?.commit()
+        }
+        return beShowingFragment
+    }
+
+
 
 }

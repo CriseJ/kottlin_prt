@@ -34,7 +34,7 @@ class SplashActivity : AppCompatActivity() {
         val scrollHelper = PagerSnapHelper()
         scrollHelper.attachToRecyclerView(ryView_splash)
         var data: MutableList<Int>? = mutableListOf()
-        for (i in 0 until 10){
+        for (i in 0 until 2){
             data!!.add(R.mipmap.ic_launcher)
         }
         spRvAdapter = SplashRvAdapter(this, data!!)
