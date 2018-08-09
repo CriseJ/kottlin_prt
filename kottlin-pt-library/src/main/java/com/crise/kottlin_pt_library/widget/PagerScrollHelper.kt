@@ -1,10 +1,8 @@
-package com.crisej.kottlinpt.widget
+package com.crise.kottlin_pt_library.widget
 
-import android.annotation.SuppressLint
 import android.support.v7.widget.RecyclerView
 import android.support.v7.widget.RecyclerView.OnFlingListener
 import android.support.v7.widget.RecyclerView.OnScrollListener
-import android.view.View
 
 /**
  * 注释：

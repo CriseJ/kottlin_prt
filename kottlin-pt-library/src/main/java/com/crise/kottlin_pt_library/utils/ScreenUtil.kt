@@ -1,4 +1,4 @@
-package com.crisej.kottlinpt.utils
+package com.crise.kottlin_pt_library.utils
 
 import android.content.Context
 

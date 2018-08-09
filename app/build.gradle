@@ -28,7 +28,6 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
-    implementation 'com.android.support:design:27.1.1'
     implementation 'org.jsoup:jsoup:1.11.3'
     implementation 'com.jaeger.statusbarutil:library:1.5.0'
     //安卓开发工具类库
@@ -38,7 +37,8 @@ dependencies {
     annotationProcessor 'com.github.bumptech.glide:compiler:4.6.1'
     //动态权限管理库
     implementation 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.5@aar'
-//    implementation 'net.sourceforge.htmlunit:htmlunit:2.31'
+    //    implementation 'net.sourceforge.htmlunit:htmlunit:2.31'
+    implementation project(':kottlin-pt-library')
 }
 repositories {
     mavenCentral()

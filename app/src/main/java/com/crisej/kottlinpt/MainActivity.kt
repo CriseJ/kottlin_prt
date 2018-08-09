@@ -2,7 +2,6 @@ package com.crisej.kottlinpt
 
 import android.content.Intent
 import android.os.Bundle
-import android.support.design.widget.NavigationView
 import android.support.v4.app.Fragment
 import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
@@ -11,18 +10,20 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
+import com.crisej.kottlinpt.mapp.ActivityIntentUtils
 import com.crisej.kottlinpt.base.BaseFragmentActivity
 import com.crisej.kottlinpt.body.fragment.HomeFragment
 import com.crisej.kottlinpt.user.fragment.Tab1Fragment
 import com.crisej.kottlinpt.user.fragment.Tab2Fragment
 import com.crisej.kottlinpt.user.fragment.Tab3Fragment
-import com.crisej.kottlinpt.utils.ScreenUtil
+import com.crise.kottlin_pt_library.utils.ScreenUtil
+import com.crisej.kottlinpt.body.ui.ToDoListActivity
 import com.jaeger.library.StatusBarUtil
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_navigation_draw.*
 import kotlinx.android.synthetic.main.content_navigation_draw.*
 
-class MainActivity : BaseFragmentActivity(), View.OnClickListener, NavigationView.OnNavigationItemSelectedListener {
+class MainActivity : BaseFragmentActivity(), View.OnClickListener{
     var exitTime: Long = 0
     private val tabNormal = intArrayOf(R.drawable.ic_svg_home, R.drawable.ic_svg_read, R.drawable.ic_svg_picture, R.drawable.ic_svg_personal)
     private val tabSelected = intArrayOf(R.drawable.ic_svg_home, R.drawable.ic_svg_read, R.drawable.ic_svg_picture, R.drawable.ic_svg_personal)
@@ -63,7 +64,7 @@ class MainActivity : BaseFragmentActivity(), View.OnClickListener, NavigationVie
         drawer_layout.addDrawerListener(toggle)
         toggle.syncState()
 
-        nav_view.setNavigationItemSelectedListener(this)
+//        nav_view.setNavigationItemSelectedListener(this)
     }
 
     override fun onClick(view: View?) {
@@ -72,7 +73,11 @@ class MainActivity : BaseFragmentActivity(), View.OnClickListener, NavigationVie
           R.id.ll_b -> switchTab(1)
           R.id.ll_c -> switchTab(2)
           R.id.ll_d -> switchTab(3)
+          R.id.ll_sharing_project -> {}//分享项目
+          R.id.ll_to_doList -> {
+              ActivityIntentUtils.startToDoListActivity(this@MainActivity)}//待办清单
         }
+        drawer_layout.closeDrawer(GravityCompat.START)
     }
 
     override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
@@ -147,32 +152,32 @@ class MainActivity : BaseFragmentActivity(), View.OnClickListener, NavigationVie
         }
     }
 
-    override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        // Handle navigation view item clicks here.
-        when (item.itemId) {
-            R.id.nav_camera -> {
-                // Handle the camera action
-            }
-            R.id.nav_gallery -> {
-
-            }
-            R.id.nav_slideshow -> {
-
-            }
-            R.id.nav_manage -> {
-
-            }
-            R.id.nav_share -> {
-
-            }
-            R.id.nav_send -> {
-
-            }
-        }
-
-        drawer_layout.closeDrawer(GravityCompat.START)
-        return true
-    }
+//    override fun onNavigationItemSelected(item: MenuItem): Boolean {
+//        // Handle navigation view item clicks here.
+//        when (item.itemId) {
+//            R.id.nav_camera -> {
+//                // Handle the camera action
+//            }
+//            R.id.nav_gallery -> {
+//
+//            }
+//            R.id.nav_slideshow -> {
+//
+//            }
+//            R.id.nav_manage -> {
+//
+//            }
+//            R.id.nav_share -> {
+//
+//            }
+//            R.id.nav_send -> {
+//
+//            }
+//        }
+//
+//        drawer_layout.closeDrawer(GravityCompat.START)
+//        return true
+//    }
 
 
 

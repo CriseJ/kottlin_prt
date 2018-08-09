@@ -34,13 +34,17 @@
             </intent-filter>
         </activity>
         <activity android:name=".user.LoginActivity" />
-        <activity android:name=".MainActivity"
-            android:theme="@style/NoTitleFullScreenTheme"/>
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/NoTitleFullScreenTheme" />
         <activity android:name=".user.fragment.CatalogActivity" />
         <activity
             android:name=".body.ui.NavigationDrawActivity"
             android:label="@string/title_activity_navigation_draw"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
+        <activity android:name=".body.ui.ToDoListActivity" />
+        <activity android:name=".body.ui.BacklogActivity"
+            android:theme="@style/Theme.AppCompat.DialogWhenLarge"></activity>
     </application>
 
 </manifest>
